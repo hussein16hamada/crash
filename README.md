@@ -1,7 +1,43 @@
+import android.animation.AnimatorListenerAdapter
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.app.Service
+import android.content.Context
+import android.content.Intent
+import android.graphics.Color
+import android.graphics.PixelFormat
+import android.os.Build
+import android.os.IBinder
+import android.util.Log
+import android.widget.Button
+import android.widget.LinearLayout
+import androidx.annotation.RequiresApi
+import androidx.core.app.NotificationCompat
+import com.eslam.efficientalarm.utils.Constants
+import com.hussein.werdbooba.R
+
+import android.view.*
+import android.widget.TextView
+import androidx.transition.Fade
+import androidx.transition.Slide
+import androidx.transition.Transition
+import androidx.transition.TransitionManager
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
+import android.view.animation.TranslateAnimation
+import com.hussein.werdbooba.Activities.Home.HomePageActivity
+import com.hussein.werdbooba.Base.TinyDB
+import com.hussein.werdbooba.MyApplication
+import kotlin.random.Random
+import android.view.WindowManager
+
+
 
 
 
 class FloatingWindowService : Service() {
+
     lateinit var azkar :Array<String>
     private lateinit var windowManager: WindowManager
     private lateinit var linearLayout: LinearLayout
